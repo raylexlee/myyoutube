@@ -1,0 +1,7 @@
+#!/bin/bash
+CHAPTER=${1?"missing: the three digit"}
+if [[ -e cover/$CHAPTER.jpg ]]; then
+  rm cover/$CHAPTER.jpg
+fi  
+PARAM=$(grep ^$CHAPTER coverparameters.txt)
+./genCoverPicture.py $PARAM
