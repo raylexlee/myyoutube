@@ -15,7 +15,9 @@ function getPlaylistItems(auth) {
   if (PageToken != 'RaylexLee') itemObj['pageToken'] = PageToken;
   const service = google.youtube('v3');
   service.playlistItems.list(itemObj).then(
-     response => { console.log(response.data.items.map( e => `'${e.contentDetails.videoId}':'${e.id}',`).join('\n'));
+     response => { 
+                   console.log(response.data);
+                   console.log(response.data.items.map( e => e.contentDetails.videoId).join('\n'));
                    const PageToken = response.data.nextPageToken;
                    if (PageToken) console.log('PageToken=' + PageToken); }
      , err => { console.log('The API returned an error: ' + err); });

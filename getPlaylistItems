@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+GETFIFTY=./getPlaylistItems.js
+PAGETOKEN=RaylexLee
+while [[ ! -z "$PAGETOKEN" ]]
+do
+$GETFIFTY $PAGETOKEN > temp.txt
+PAGETOKEN=$(grep PageToken= temp.txt | sed 's/PageToken=//')
+sed '/^PageToken=/ d' temp.txt
+done

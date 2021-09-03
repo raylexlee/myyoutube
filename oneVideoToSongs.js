@@ -10,7 +10,7 @@ const videoItem = (auth, videoId) => { return {
       ],
       "resource": {
         "snippet": {
-          "playlistId": "PLJrt_9xl0rNH_RNH8xsNPcj1Yyj3ZACkP",
+          "playlistId": "PLJrt_9xl0rNHsohKnkTWwB9sGTQRhILxB",
           "position": 0,
           "resourceId": {
             "kind": "youtube#video",
