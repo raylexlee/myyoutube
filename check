@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 cp /dev/null errorid.txt
-for ytid in $(cat songs_allid.txt)
+for ytid in $(cat songs_1st200.txt)
 do
 if [[ $ytid =~ ^[OP]L ]]; then
 youtube-dl -s -q --playlist-end 1 https://www.youtube.com/playlist?list=$ytid

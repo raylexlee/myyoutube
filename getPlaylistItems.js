@@ -10,7 +10,8 @@ function getPlaylistItems(auth) {
         "contentDetails"
       ],
       "maxResults": 50,
-      "playlistId": "PLJrt_9xl0rNH_RNH8xsNPcj1Yyj3ZACkP"
+//      "playlistId": "PLJrt_9xl0rNH_RNH8xsNPcj1Yyj3ZACkP"
+      "playlistId": "PLJrt_9xl0rNHsohKnkTWwB9sGTQRhILxB"
   };
   if (PageToken != 'RaylexLee') itemObj['pageToken'] = PageToken;
   const service = google.youtube('v3');
