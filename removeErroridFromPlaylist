@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for VID in $(cat errorid.txt)
+do
+./deletePlaylistVideoid.js $VID
+done

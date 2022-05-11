@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+const songsPlaylistId = "PLJrt_9xl0rNH_RNH8xsNPcj1Yyj3ZACkP";
+const songs_blistPlaylistId = "PLJrt_9xl0rNHsohKnkTWwB9sGTQRhILxB";
 const fs = require('fs');
 const {google} = require('googleapis');
 const authorize = require('./authorize.js');
@@ -10,8 +12,7 @@ function getPlaylistItems(auth) {
         "contentDetails"
       ],
       "maxResults": 50,
-//      "playlistId": "PLJrt_9xl0rNH_RNH8xsNPcj1Yyj3ZACkP"
-      "playlistId": "PLJrt_9xl0rNHsohKnkTWwB9sGTQRhILxB"
+      "playlistId": songs_blistPlaylistId
   };
   if (PageToken != 'RaylexLee') itemObj['pageToken'] = PageToken;
   const service = google.youtube('v3');

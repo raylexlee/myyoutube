@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 cp /dev/null errorid.txt
-for ytid in $(cat songs_1st200.txt)
+for ytid in $(./allVideoIdsFrom_playlist_item_id.js)
 do
 if [[ $ytid =~ ^[OP]L ]]; then
 youtube-dl -s -q --playlist-end 1 https://www.youtube.com/playlist?list=$ytid
 else
-youtube-dl -s -q https://www.youtube.com/watch?v=$ytid
+youtube-dl -s -q https://youtu.be/$ytid
 fi
 if (( $? != 0 )); then
 echo $ytid >> errorid.txt
